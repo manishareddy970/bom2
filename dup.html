@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+   
+
+    <script>
+      //getting image
+      var div1 = document.createElement("div");
+      document.body.appendChild(div1);
+      var imgg = document.createElement("img")
+      var ab = window.localStorage.getItem("image");
+      imgg.setAttribute("src", ab);
+      imgg.style.width = "200px";
+      imgg.style.marginLeft = "200px";
+      div1.appendChild(imgg);
+
+     //totla .....
+      var aa = window.localStorage.getItem("total");
+      var bb = JSON.parse(aa);
+
+      var div2 = document.createElement("div");
+      document.body.appendChild(div2);
+      div2.style.border = "solid 1px gray";
+      div2.style.marginLeft = "600px";
+      div2.style.marginTop = "-180px";
+      div2.style.width = "400px";
+      div2.style.textAlign = "center";
+
+      var h1 = document.createElement("h3");
+      h1.innerText = bb["id"];
+      document.body.appendChild(h1);
+      div2.appendChild(h1);
+
+      var h1 = document.createElement("h3");
+      h1.innerText = bb["title"];
+      document.body.appendChild(h1);
+      div2.appendChild(h1);
+
+      var h1 = document.createElement("h3");
+      h1.innerText = bb["price"];
+      document.body.appendChild(h1);
+      div2.appendChild(h1);
+
+      var h1 = document.createElement("h3");
+      h1.innerText = bb["category"];
+      document.body.appendChild(h1);
+      div2.appendChild(h1);
+
+      var h1 = document.createElement("h3");
+      h1.innerText = bb["rating"]["rate"];
+      document.body.appendChild(h1);
+      div2.appendChild(h1);
+
+      var h1 = document.createElement("h3");
+      h1.innerText = bb["rating"]["count"];
+      document.body.appendChild(h1);
+      div2.appendChild(h1);
+       
+
+
+
+      var div3 = document.createElement("div");
+      document.body.appendChild(div3);
+      div3.style.display="inline-block"
+      var img1 = document.createElement("img");
+      div3.appendChild(img1)
+      img1.setAttribute("src", "./iiii.jpg");
+      img1.style.width = "200px";
+      img1.style.marginTop = "100px";
+      
+      
+      var div4 = document.createElement("div");
+      document.body.appendChild(div4);
+      div4.style.display="inline-block"
+      var img2 = document.createElement("img");
+      div4.appendChild(img2)
+      img2.setAttribute("src", "./ii.jpg");
+      img2.style.width = "200px";
+      img2.style.marginTop = "100px";
+      
+      var div5 = document.createElement("div");
+      document.body.appendChild(div5);
+      div5.style.display="inline-block"
+      var img3 = document.createElement("img");
+      div5.appendChild(img3)
+      img3.setAttribute("src", "./ring.webp");
+      img3.style.width = "200px";
+      img3.style.marginTop = "100px";
+      
+
+     img1.addEventListener("click",function(){
+     imgg.setAttribute("src","./iiii.jpg")
+     imgg.style.width = "270px";
+      imgg.style.marginLeft = "200px";
+      imgg.style.marginTop="16px"
+
+     })
+
+
+
+     img2.addEventListener("click",function(){
+     imgg.setAttribute("src","./ii.jpg")
+     imgg.style.width = "260px";
+      imgg.style.marginLeft = "200px";
+      imgg.style.marginTop="11px"
+     })
+     
+
+     img3.addEventListener("click",function(){
+     imgg.setAttribute("src","./ring.webp")
+     imgg.style.width = "280px";
+      imgg.style.marginLeft = "200px";
+      imgg.style.marginTop="5px"
+     })
+     
+
+      // img1[0].addEventListener("click", function () {
+        
+      //   imggg[0].setAttribute("src","./iiii.jpg")
+      //   imggg[0].style.width="200px";
+      //   div[0].replaceWith(imggg[0])
+      //   imggg[0].style.marginLeft="200px";
+      //   imggg[0].style.marginTop="200px";
+      // });
+
+      // img2[0].addEventListener("click", function () {
+      //   imggg[0].setAttribute("src", "./ii.jpg");
+      //   imggg[0].style.width = "200px";
+      //   div[0].replaceWith(imggg[0]);
+      //   imggg[0].style.marginLeft = "200px";
+      //   imggg[0].style.marginTop = "200px";
+      // });
+
+
+      
+      // img3[0].addEventListener("click", function () {
+      //   imggg[0].setAttribute("src", "./ring.webp");
+      //   imggg[0].style.width = "200px";
+      //   div[0].replaceWith(imggg[0]);
+      //   imggg[0].style.marginLeft = "200px";
+      //   imggg[0].style.marginTop = "200px";
+      // });
+    </script>
+  </body>
+</html>
